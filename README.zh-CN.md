@@ -7,7 +7,7 @@
 
 [English](README.md)
 
-`cpa-warden` 是一个面向本地运维场景的交互式 CPA 认证文件扫描与账号维护工具，适用于特定 CPA 管理环境。
+`cpa-warden` 是一个面向本地运维场景的交互式 [CLIProxyAPI（CPA）](https://github.com/router-for-me/CLIProxyAPI) 认证文件扫描与账号维护工具，适用于特定 CPA 管理环境。
 
 它当前依赖两类管理接口：`GET /v0/management/auth-files` 用于拉取认证文件清单，`POST /v0/management/api-call` 用于请求 `https://chatgpt.com/backend-api/wham/usage` 并完成用量探测。
 
@@ -26,7 +26,7 @@
 - 在 TTY 中未提供 `--mode` 时默认进入交互模式
 - 支持可重复执行的非交互 `scan` 与 `maintain` 流程
 - 敏感信息通过外部 JSON 配置提供，例如 `base_url` 和 `token`
-- 通过 CPA `api-call` 接口并发探测 usage
+- 通过 CLIProxyAPI `api-call` 接口并发探测 usage
 - 使用本地 SQLite 持久化多轮状态
 - 导出失效账号和限额账号 JSON
 - 生产模式终端输出简短，在 TTY 下可显示 Rich 进度
@@ -90,8 +90,8 @@ cp config.example.json config.json
 
 重要配置项说明：
 
-- `base_url`：CPA 管理接口基础地址
-- `token`：CPA 管理 token
+- `base_url`：CLIProxyAPI 管理接口基础地址
+- `token`：CLIProxyAPI 管理 token
 - `target_type`：按 `files[].type` 过滤记录
 - `provider`：按 `provider` 字段过滤记录
 - `probe_workers`：usage 探测并发数
@@ -215,6 +215,10 @@ uv run python cpa_warden.py --mode maintain --quota-action delete --yes
 ## 更新记录
 
 见 [CHANGELOG.md](CHANGELOG.md)。
+
+## 安全说明
+
+负责任披露流程见 [SECURITY.md](SECURITY.md)。
 
 ## 许可证
 

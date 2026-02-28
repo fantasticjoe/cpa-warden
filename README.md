@@ -7,7 +7,7 @@
 
 [简体中文](README.zh-CN.md)
 
-`cpa-warden` is an interactive CPA auth inventory scanner and maintenance tool for local operations against a specific CPA management environment.
+`cpa-warden` is an interactive [CLIProxyAPI (CPA)](https://github.com/router-for-me/CLIProxyAPI) auth inventory scanner and maintenance tool for local operations against a specific CPA management environment.
 
 It currently relies on two management flows: `GET /v0/management/auth-files` for inventory and `POST /v0/management/api-call` against `https://chatgpt.com/backend-api/wham/usage` for usage probing.
 
@@ -26,7 +26,7 @@ From a user perspective, the script:
 - Interactive mode by default when no `--mode` is provided in a TTY
 - Non-interactive `scan` and `maintain` workflows for repeatable runs
 - External JSON configuration for sensitive values such as `base_url` and `token`
-- Concurrent usage probing through the CPA `api-call` endpoint
+- Concurrent usage probing through the CLIProxyAPI `api-call` endpoint
 - Local SQLite state tracking across runs
 - JSON exports for invalid and quota-limited accounts
 - Short production output with optional Rich progress display in TTY sessions
@@ -90,8 +90,8 @@ Example configuration:
 
 Important configuration keys:
 
-- `base_url`: CPA management base URL
-- `token`: CPA management token
+- `base_url`: CLIProxyAPI management base URL
+- `token`: CLIProxyAPI management token
 - `target_type`: filter records by `files[].type`
 - `provider`: filter records by the `provider` field
 - `probe_workers`: concurrency for usage probing
@@ -215,6 +215,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md).
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for responsible disclosure guidance.
 
 ## License
 

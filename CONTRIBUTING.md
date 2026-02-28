@@ -2,7 +2,7 @@
 
 ## Scope Of Contributions
 
-Contributions are welcome for documentation, bug fixes, stability improvements, and CLI usability improvements. Keep changes focused on the current purpose of the project: safe and understandable CPA account scanning and maintenance for known environments.
+Contributions are welcome for documentation, bug fixes, stability improvements, and CLI usability improvements. Keep changes focused on the current purpose of the project: safe and understandable [CLIProxyAPI (CPA)](https://github.com/router-for-me/CLIProxyAPI) account scanning and maintenance for known environments.
 
 ## Local Setup
 
@@ -48,7 +48,7 @@ uv run python -m py_compile cpa_warden.py clean_codex_accounts.py
 uv run python cpa_warden.py --help
 ```
 
-If your change affects runtime behavior, validate it against your own CPA environment and sanitize all logs, exports, and screenshots before sharing them.
+If your change affects runtime behavior, validate it against your own CLIProxyAPI environment and sanitize all logs, exports, and screenshots before sharing them.
 
 ## Security And Sensitive Data Handling
 
@@ -59,6 +59,8 @@ Never commit:
 - local runtime artifacts such as `config.json`, SQLite databases, log files, or exported account JSON
 
 If you need to share output for debugging, remove secrets and operational identifiers first.
+
+For vulnerability reports, do not open a public issue. Follow [SECURITY.md](SECURITY.md) instead.
 
 ## Pull Request Expectations
 

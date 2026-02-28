@@ -8,9 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- Interactive `scan` and `maintain` workflows for local CPA account operations
-- External JSON configuration for CPA connection settings and runtime behavior
-- Concurrent `wham/usage` probing through the CPA `api-call` endpoint
+- Interactive `scan` and `maintain` workflows for local [CLIProxyAPI (CPA)](https://github.com/router-for-me/CLIProxyAPI) account operations
+- External JSON configuration for CLIProxyAPI connection settings and runtime behavior
+- Concurrent `wham/usage` probing through the CLIProxyAPI `api-call` endpoint
 - SQLite state tracking for auth inventory and probe results
 - JSON exports for invalid `401` accounts and quota-limited accounts
 - Rich progress support for production runs in TTY environments

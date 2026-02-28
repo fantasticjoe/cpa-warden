@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability report
+    url: https://github.com/fantasticjoe/cpa-warden/security/policy
+    about: Read the security policy and avoid filing suspected vulnerabilities as public issues.
+  - name: Project documentation
+    url: https://github.com/fantasticjoe/cpa-warden#readme
+    about: Check the README for setup, configuration, and usage details before opening an issue.
