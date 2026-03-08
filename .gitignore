@@ -4,6 +4,7 @@
 __pycache__/
 *.pyc
 config.json
+.env
 *.local.json
 *.sqlite3
 cpa_warden_401_accounts.json
